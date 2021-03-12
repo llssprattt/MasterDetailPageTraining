@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MasterDetailPageTraining.Views.QuoteDetailPageView"
+             Title="{Binding Title}">
+
+    <StackLayout BackgroundColor="Cornsilk" Margin="0,20,0,0">
+        <ListView x:Name="lvAuthorQuote" ItemsSource="{Binding AuthorQuotes}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Padding="20,10" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                <Label Text="{Binding Text}" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" LineBreakMode="WordWrap"/>
+                            </StackLayout>                            
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+  
+</ContentPage>
